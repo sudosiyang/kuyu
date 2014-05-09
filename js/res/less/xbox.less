@@ -1,0 +1,110 @@
+.clearfix:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0}
+.clearfix{*zoom:1}
+.tetequ-box{
+	h2{
+		margin: 0;
+		padding: 0;
+	}
+	.ui-mask{
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		z-index: 999;
+		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+		filter: alpha(opacity=20);
+		opacity: 0.2;
+		background-color: #000;
+	}
+	.ui-box{
+		background-color: rgba(0,0,0,0.5);
+		filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#8c000000', EndColorStr='#8c000000');
+		padding: 6px;
+		-webkit-transition: height .3s ease-in-out .3s;
+		-moz-transition: height .3s ease-in-out .3s;
+		-o-transition: height .3s ease-in-out .3s;
+		-ms-transition: height .3s ease-in-out .3s;
+		transition: height .3s ease-in-out .3s;
+		border: 0;
+		z-index: 999;
+		position: absolute;
+	}
+	.box-close{
+		color: #999;
+		cursor: pointer;
+		display: inline;
+		font-family: tahoma;
+		font-size: 2em;
+		font-weight: 700;
+		height: 18px;
+		line-height: 14px;
+		position: absolute;
+		right: 17px;
+		text-decoration: none;
+		top: 16px;
+		z-index: 10;
+		&.hover{
+			color: #666;
+			text-shadow: 0 0 2px #aaa;
+		}
+	}
+	.box-content{
+		background: #fff;
+	}
+	.box-title {
+		height: 40px;
+		line-height: 40px;
+		background: #fafafa;
+		width: 100%;
+		border-bottom: 1px solid #d8d8d8;
+		position: relative;
+		display: none;
+		.box-title-name{
+			display: inline-block;
+			line-height: 40px;
+			padding-left: 20px;
+			font-size: 18px;
+			color: #4d4d4d;
+		}
+	}
+	.box-body{
+		padding: 20px;
+		font-size: 1.4em;
+	}
+	.box-footer{
+		background: #fafafa;
+		display: none;
+		padding: 10px;
+		border-top: 1px solid #d8d8d8;
+		-webkit-box-sizing: border-box;
+		position: relative;
+		a{
+			float: right;
+			display: inline-block;
+			width: 50px;
+			height: 25px;
+			line-height: 25px;
+			text-align: center;
+			cursor: pointer;
+			color: #fff;
+			margin-left: 10px;
+			border-radius: 3px;
+			&:hover{
+				text-decoration: none;
+			}
+			&.box-ok{
+				background: #fd8608;
+				border: 1px solid darken(#fd8608, 10%);
+			}
+			&.box-copy{
+				background: #4abae1;
+				border: 1px solid darken(#4abae1, 10%);
+			}
+			&.box-cancle{
+				background: #676d70;
+				border: 1px solid darken(#676d70, 10%)
+			}
+		}
+	}
+}

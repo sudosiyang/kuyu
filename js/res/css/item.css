@@ -1,0 +1,6 @@
+.m-item{height:40px;line-height:40px;border-bottom:1px solid #ccc;font-size:12px}.m-item.m-hd{border-bottom:3px solid #dbdbdb}
+.m-item .t-l{float:left}
+.m-content{padding-bottom:10px}
+.m-item:nth-of-type(2n),.m-hd{background-color:#f8f8f8}
+.col1{width:20%}
+.col2{width:20%}
