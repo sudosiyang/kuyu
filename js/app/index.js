@@ -9,8 +9,34 @@ define(function(require) {
 	});
 	$(".m-nav").on("activate", function(e) {
 
+	});
+
+	
+	$(".nav li").hover(function(e) {
+		var index = $.inArray($(e.target)[0], $.makeArray($(".nav li a")));
+		var active = $.inArray($(".nav .active")[0], $.makeArray($(".nav li")));
+		if ($(".u-animate").is(":hidden")) {
+			$(".u-animate").css({
+				"left": 100 * active
+			}).show().stop().animate({
+				left: 100 * index
+			});
+		} else {
+			$(".u-animate").stop().animate({
+				left: 100 * index
+			});
+		}
+	},function(e){
+		var active = $.inArray($(".nav .active")[0], $.makeArray($(".nav li")))
+		$(".u-animate").stop().animate({
+				left: 100 * active
+			},function(){
+				$(".u-animate").hide();
+			});
 	})
-	var slidey=$(".banner").unslider({
+
+
+	var slidey = $(".banner").unslider({
 		speed: 500, //  动效执行时间
 		delay: 3000, // 轮询时间 
 		complete: function() {}, //  每次滑动特效后执行函数
@@ -24,7 +50,7 @@ define(function(require) {
 		data.next();
 	}).next().click(function(event) {
 		data.prev();
-	});;
+	});
 
 	$(".m-nav a").click(function(e) {
 
